@@ -5,11 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .size{width:250px;
+        height: 250px;}
+    </style>
 </head>
 <body>                                <!-- need to restart when live server installed-->
     <h3>dark seid</h3>
-    <script src="switch.js">                               // we can write the java script code inside scripts
-        //console.log("stephen wolf");     // writing statement  in the console   of the web page      //html-content javascript-behaviour-->
-    </script>
+    <script src="zoom.js"> </script>
+    <img src="twitter.jpg" alt="zoom"id="img" width="200px" onmouseover="increase()" onmouseout="decrease()">  <!--initial width ==200-->
+
+    
+
+    <!--<input type="button" value="fade-in"onclick="fadein()">
+    <input type="button" value="fade-out"onclick="fadeout()">-->
+
+
+    <!-- we can write the java script code inside scripts    //console.log("stephen wolf");     // writing statement  in the console   of the web page      //html-content javascript-behaviour-->
+
 </body>
 </html>
+
+
+
+<!--radio button
+  <p>how many films in dark knight trialogy</p>
+
+    (A)<input type="radio" id="opt1" name="1" value="4 films">4 FILMS<br> place holer user to display the stament inside the text box
+    (B)<input type="radio" id="opt2" name="1" value="3 films">3 FILMS<br> with the help of name we can select only one option-->
+    <!-- with the help of name in input we can specify the options in one group like we can select only one
+    
+    selectbox(dropdown list)
+
+<p>who is the powerful hero in DC</p>
+<select id="one">
+    <option value="BATMAN">batman</option>
+    <option value="SUPERMAN">superman</option>
+    <option value="FLASH">flash</option>
+</select><br>
+
+tag name
+<div> SECTION 1 : DAWN OF JUSTICE</div>
+<div> SECTION 2 : JUSTICE LEAGUE</div>
+<div> SECTION 3 : PEACE MAKER</div>
+<div> SECTION 4 : TITANS</div>
+<div> SECTION 5 : PENGUIN</div>
+
+get element by class name
+
+<div class="dc1">batman begins</div>
+<div class="dc1">batman dark knight</div>
+<p>superman man of steel</p>
+<p>superman returns</p>
+<div class="dc1">batman dark knight rises</div>
+
+onmouse over
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20210915115837/gfg3.png"alt="logo"width=250px onmouseover="changesize()" onmouseout="changesize2()"id="img">
+
+
+time function
+<button onclick="timefunc()">CLICK ME</button>
+<button onclick="stop()">STOP </button>
+
+
+character
+
+<form>
+        <input id="eid" placeholder="Employee id"type="text">
+        <button onclick="employee()">submit</button>
+        </form>
+
+form validation
+
+<form action="homepage.html" onsubmit="return validate()">    return validate wont redirect to homepage.html when the program runs complete
+    <input type="text" id="uname" placeholder="User Name" >  required-should be filled compolsory
+    <input type="number" id="age" placeholder="Age">
+    <input type="password" id="pass" placeholder="Password">
+    <input type="submit" value="Submit">
+</form>
+
+
+fade in and fade out
+<h1>animations</h1>
+    <img src="twitter.jpg" id="img" alt="java script" class="size" onmouseover="fadein()" onmouseout="fadeout()">
+-->
