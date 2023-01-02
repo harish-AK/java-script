@@ -1,0 +1,23 @@
+{
+    "items":[
+        {
+        "sys": {"id":"1"},
+        "fields": {
+            "title":"Python Programming Mastercourse",
+            "price":123.99,
+            "image":{"fields":{"file":{"url":"joker.jpg"}}}
+        }
+    },  
+    {
+        "sys": {"id":"2"},
+        "fields": {
+            "title":"c++ Programming Mastercourse",
+            "price":123.99,
+            "image":{"fields":{"file":{"url":"joker.jpg"}}}
+        }
+    }   
+  
+
+    
+    ]
+}
