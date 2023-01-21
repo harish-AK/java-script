@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    ARRAYS IN JAVASCRIPT
+</head>
+<body ><p id="demo"></p>
+    
+</body>
+<script>
+    let cahrs=["batman","superman","alfred","ramu"];
+    document.getElementById("demo").innerHTML=cahrs;       //inner.HTML is responsible for what is being displayed on the web page
+    document.write(cahrs[0]);
+    document.getElementById("demo").innerHTML=cahrs.length;       //inner.HTML last retrieve value only displayed
+    document.getElementById("demo").innerHTML=cahrs[cahrs.length-1];  //retrieve last element in array
+    cahrs.forEach((item,index)=>{console.log(item,index);});  // for each which runs like a loop for all values in an array "
+    //item is the variable which act as in for loop for i in cahrs"
+    document.getElementById("demo").innerHTML=cahrs.toString(); // which will convert the array into string
+     let popp=cahrs.pop();
+    document.getElementById("demo").innerHTML=popp; //pop the last element
+    cahrs.push("catwomen");
+    document.getElementById("demo").innerHTML=cahrs;  //adding new element
+    document.getElementById("demo").innerHTML=cahrs.shift();//remove first element
+    console.log(cahrs.shift());
+    console.log(cahrs);
+    cahrs.unshift("flash");
+    document.getElementById("demo").innerHTML=cahrs;
+
+    let marvel=["ironman","captain america"];
+    let join=cahrs.concat(marvel);
+    document.getElementById("demo").innerHTML=join;  //join two arrays
+    join.sort();
+    document.getElementById("demo").innerHTML=join;// arrange in alphabetic order
+
+    join.reverse();
+    document.getElementById("demo").innerHTML=join;  //reverse alphabatic order
+
+    let num1=[2,4,6];
+    let num2=num1.map(multiply);  //pass a function in another variable 
+    function multiply(values){
+        return values*2;
+    }
+    join.sort();
+    document.getElementById("demo").innerHTML=num2;
+
+
+    let num3=num1.filter(func);
+    function func(val){
+        return val>4;
+    }
+    document.getElementById("demo").innerHTML=num3;     //only returns the array elements which are greater than 4
+
+    let num4=num1.reduce(sum);// seperate the elements in array then addd the elements in array
+    function sum(tot,val){
+        return tot+val;
+    }
+    document.getElementById("demo").innerHTML=num4;
+</script>  
+
+</html>
