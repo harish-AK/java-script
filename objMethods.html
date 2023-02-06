@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <p id="demo"></p> <!-- id can only be displayed in the body tag     can create multiple objects using seperate id for each script's printing statement-->
+    <p id="new"></p>  
+    <p id="fun"></p>
+    <button id="PRESS">PRESS me</button>
+
+    <script>
+
+       let vara={
+        name:"ram",
+        age:21
+       }
+       function hi(){
+        alert("thavaru seithuvittai");
+       }
+       vara.msg=hi;
+       document.getElementById("demo").innerHTML="from msg "+vara.name;
+       document.getElementById("PRESS").onclick=vara.msg;  //when the button is clicked hi() function will be called
+    </script>
+
+</body>
+</html>

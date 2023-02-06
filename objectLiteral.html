@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECT LITERAL</title>
+</head>
+<body>
+    <p id="demo"></p> <!-- id can only be displayed in the body tag     can create multiple objects using seperate id for each script's printing statement-->
+    <p id="new"></p>  
+    <p id="fun"></p>
+
+    <script>
+
+        var obj={name:"ram",age:12,group:"COMPUTER"}
+
+        
+        document.getElementById("demo").innerHTML="name is : "+obj.name + " age is "+obj.age
+
+    </script>
+    <script>
+        var obj1=new Object();
+        obj1.name="shan",
+        obj1.age=22,
+        obj1.group="medical"
+
+        document.getElementById("new").innerHTML="name is : "+obj1.name + " age is "+obj1.age
+    </script>
+    <script>
+        function func(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        var fun=func("superman",211)
+        document.getElementById("fun").innerHTML="name is : "+fun.name + " age is "+fun.age
+
+
+    </script>
+</body>
+</html>
