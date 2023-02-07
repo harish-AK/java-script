@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calc(c){
+            c=c*c;
+            document.write("c="+c);
+        }
+        calc(5);
+    </script>
+    <script>
+        var exp=function(){
+            alert("function expression");
+        }
+        document.write(exp());  //print the variable as function()
+    </script>
+    <script>
+        myfunc=new Function("num","age","return  num+age");   //syntax alone allowex here;  Function-constructor
+        var cc=myfunc(2,3);
+        document.write(cc);
+    </script>
+    <script>
+        (function(){
+            alert("self invoking functions ");
+        })()//function call
+    </script>
+    <script>
+        function funcAsVal(a,b){
+            return a*b;
+        }
+        let tot=funcAsVal(2,2) //values inserted at function call 
+        document.write(tot)
+    </script>
+    <script>
+        var body="return Math.PI*rad*rad"
+        var func=new Function("rad",body) //parameters
+        alert(func(5))
+    </script>
+
+    <script>
+        var arrow=(a,b,c)=>{
+            return a*b*c
+        }
+        var t=arrow(1,2,3)
+        document.write(t)
+    </script>
+</body>
+</html>
