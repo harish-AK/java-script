@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let result=function(score){
+            return new Promise(function(resolve,reject){
+                if(score>80){
+                    resolve(" you have passed")
+                }
+                else{
+                    reject("you are failed")
+                }
+            })
+        }
+        let grade=function(response){
+            return new Promise(function(resolve,reject){
+                document.write(" calculating result ")
+                resolve("your grade is A "+response)
+            })
+        }
+        async function calculate(){
+           try{ const response=await result(81)
+            document.write(" result is received")
+            const final=await grade(response)
+            document.write(final)
+        }
+        catch(err){
+            document.write(err)
+        }}
+        calculate()
+    </script>
+</body>
+</html>

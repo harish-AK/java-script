@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var u=100
+        function my(){
+            let u=200
+            document.write(" value "+u)
+            document.write(" this operator value "+this.u)//this-reference to the global variable
+        }
+        my()
+    </script>
+    <script>
+        const ran={
+            name:"ram",
+            courses:["js"," c++"," java "],
+            info(){
+                this.courses.forEach(function(tag){
+                    document.write(tag,this.name)
+                },this)  //reference to the current object that is ran
+            }
+            
+        }
+        ran.info()
+    </script>
+</body>
+</html>

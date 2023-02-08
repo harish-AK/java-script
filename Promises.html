@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dc=new Promise(function(resolve,reject){
+            batman="dead";
+            if(batman=="alive"){
+                resolve()
+            }
+            else{
+                reject()
+            }
+        })
+        dc.then(function(){//like try execute the code if there is no error
+            document.write("batman is alive")
+        }).catch(function(){     // catch the error if the statement is failed
+            document.write("batman is dead ")
+        })
+    </script>
+    <br>
+    <script>
+        let emp=function(){
+            return new Promise(function(resolve,reject){
+                resolve("tank is empyty")
+            })
+
+        }
+        let eng=function(msg){
+            return new Promise(function(resolve,reject){
+                resolve(msg+" engine is overheated ")
+            })
+        }
+        let trav=function(msg){
+            return new Promise(function(resolve,reject){
+                resolve(msg+" not safe for travelling")
+            })
+        }
+        emp().then(function(result){
+            return eng(result)
+            
+        }).then(function(result){
+            return trav(result)
+        }).then(function(result){
+            document.write("work done "+result)
+        })
+    </script>
+</body>
+</html>
