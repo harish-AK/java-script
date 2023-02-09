@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            if(document.validation.mail.value=""){
+                alert("enter the email")
+                document.validation.mail.focus()  //focus on the particular field
+                return false
+            }
+            else if(document.validation.password.value==""){
+                alert("enter the password")
+                document.validation.password.focus()
+                return false
+            }else{
+                return true
+            }
+        }
+    </script>
+</head>
+<body>
+   
+    <form action="msg.html" name="validation"onsubmit="return(validate())">
+        <input type="text" placeholder="mail id" name="mail"><br>
+        <input type="text" placeholder="password" name="pasword"><br>
+        <button type="submit"> submit</button>
+    </form>
+</body>
+</html>
